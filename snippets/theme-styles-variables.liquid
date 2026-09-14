@@ -530,8 +530,8 @@
     /* Icons */
     --icon-size-2xs: 0.6rem;
     --icon-size-xs: 0.85rem;
-    --icon-size-sm: 1.25rem;
-    --icon-size-md: 1.375rem;
+    --icon-size-sm: 1.6rem;
+    --icon-size-md: 1.6rem;
     --icon-size-lg: 1.5rem;
     --icon-stroke-width: {% if settings.icon_stroke == 'thin' %}1px{% elsif settings.icon_stroke == 'heavy' %}2px{% else %}1.5px{% endif %};
 
@@ -568,6 +568,10 @@
     /* Button font-family */
     --button-font-family-primary: var(--font-{{ settings.type_font_button_primary }}--family);
     --button-font-family-secondary: var(--font-{{ settings.type_font_button_secondary }}--family);
+
+    /* Button font-weight */
+    --button-font-weight-primary: {% if settings.button_font_weight_primary != blank and settings.button_font_weight_primary != 'default' %}{{ settings.button_font_weight_primary }}{% else %}var(--font-{{ settings.type_font_button_primary }}--weight, normal){% endif %};
+    --button-font-weight-secondary: {% if settings.button_font_weight_secondary != blank and settings.button_font_weight_secondary != 'default' %}{{ settings.button_font_weight_secondary }}{% else %}var(--font-{{ settings.type_font_button_secondary }}--weight, normal){% endif %};
 
     /* Button text case */
     --button-text-case-primary: {{ settings.button_text_case_primary }};
