@@ -1,4 +1,3 @@
-
 {% render 'button', link: block.settings.link %}
 
 {% schema %}
@@ -47,6 +46,46 @@
       ],
       "default": "button",
       "info": "t:info.edit_button_style_in_theme_settings"
+    },
+    {
+      "type": "select",
+      "id": "font_weight",
+      "label": "t:settings.font_weight",
+      "options": [
+        {
+          "value": "",
+          "label": "t:options.default"
+        },
+        {
+          "value": "300",
+          "label": "300 - Light"
+        },
+        {
+          "value": "400",
+          "label": "400 - Normal"
+        },
+        {
+          "value": "500",
+          "label": "500 - Medium"
+        },
+        {
+          "value": "600",
+          "label": "600 - Semi-bold"
+        },
+        {
+          "value": "700",
+          "label": "700 - Bold"
+        },
+        {
+          "value": "800",
+          "label": "800 - Extra bold"
+        },
+        {
+          "value": "900",
+          "label": "900 - Black"
+        }
+      ],
+      "default": ""
     },
     {
       "type": "header",
